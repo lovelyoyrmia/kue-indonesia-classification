@@ -14,7 +14,7 @@ class Utils():
                  error_upload="Cannot Upload Your Image !",
                  error_url="Please Input The Valid URL",
                  error_file="Cannot Upload File. Please try again !",
-                 api_key=os.getenv('API_KEY_MAPS')):
+                 api_key=st.secrets.get('API_KEY_MAPS')):
         self.error_upload = error_upload
         self.error_url = error_url
         self.error_file = error_file
@@ -52,7 +52,6 @@ class Utils():
     
     def getCurrentLoc(self):
         try:
-            print(self.api_key)
             gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
             latitude = loc['location']['lat']
@@ -76,16 +75,19 @@ class Utils():
         }
     
     def getRestaurant(self, keyword, lat, lng):
-        url = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&keyword={keyword}&opennow=true&radius=2000&type=restaurant&key={self.api_key}'
-        response = requests.get(url)
-        data = response.json()['results']
-        
-        restaurants = []
-        for resto in data:
-            restoInfo = self.extractRestaurantInfo(resto)
-            restaurants.append(restoInfo)
-        
-        return restaurants
+        try:
+            url = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&keyword={keyword}&opennow=true&radius=2000&type=restaurant&key={self.api_key}'
+            response = requests.get(url)
+            data = response.json()['results']
+            
+            restaurants = []
+            for resto in data:
+                restoInfo = self.extractRestaurantInfo(resto)
+                restaurants.append(restoInfo)
+            
+            return restaurants
+        except Exception:
+            return []
     
     def openGmaps(self, lat, lng):
         url = f'https://www.google.com/maps/search/?api=1&query={lat},{lng}'

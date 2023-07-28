@@ -38,10 +38,10 @@ class Pages():
         img, imgSt = component.uploader()
         
         if imgSt and img:
-            lat, lng = utils.getCurrentLoc()
-            
+
             name = imgSt.split('/')[-1] if type(imgSt) == str else imgSt.name    
             if st.button('Predict'):
+                lat, lng = utils.getCurrentLoc()
                 label, description, url = utils.getPrediction(img, self.lang)
 
                 col1, col2 = st.columns([2, 2])
