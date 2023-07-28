@@ -53,6 +53,7 @@ class Utils():
         return label, description, url
     
     def getCurrentLoc(self):
+        st.write(self.api_key)
         try:
             gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
