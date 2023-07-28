@@ -20,7 +20,8 @@ class Pages():
         utils = Utils(
             error_upload=self.data_lng['error_upload'],
             error_url=self.data_lng['error_url'],
-            error_file=self.data_lng['error_file']
+            error_file=self.data_lng['error_file'],
+            error_maps=self.data_lng['error_maps']
         )
 
         component = Components(
@@ -41,7 +42,6 @@ class Pages():
 
             name = imgSt.split('/')[-1] if type(imgSt) == str else imgSt.name    
             if st.button('Predict'):
-                lat, lng = utils.getCurrentLoc()
                 label, description, url = utils.getPrediction(img, self.lang)
 
                 col1, col2 = st.columns([2, 2])
@@ -53,6 +53,9 @@ class Pages():
                 if url is not None:
                     col2.markdown(f'''<a href="{url}" target="_blank">{self.data_lng['label_link']}</a>''', unsafe_allow_html=True)
                 
+                lat, lng = utils.getCurrentLoc()
+                if lat is None or lng is None:
+                    return
                 restaurants = utils.getRestaurant(label, lat, lng)
 
                 st.subheader(self.data_lng['nearby_resto'])

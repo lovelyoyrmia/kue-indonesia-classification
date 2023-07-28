@@ -14,10 +14,12 @@ class Utils():
                  error_upload="Cannot Upload Your Image !",
                  error_url="Please Input The Valid URL",
                  error_file="Cannot Upload File. Please try again !",
+                 error_maps="Cannot get locations",
                  api_key=st.secrets.get('API_KEY_MAPS')):
         self.error_upload = error_upload
         self.error_url = error_url
         self.error_file = error_file
+        self.error_maps = error_maps
         self.api_key = api_key
 
     def loadImageUrl(self, url):
@@ -57,8 +59,9 @@ class Utils():
             latitude = loc['location']['lat']
             longitude = loc['location']['lng']
             return latitude, longitude
-        except:
-            return None
+        except Exception:
+            st.error(self.error_maps)
+            return None, None
     
     def extractRestaurantInfo(self, restaurants):
         name = restaurants.get("name")
