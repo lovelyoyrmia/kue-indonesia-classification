@@ -57,6 +57,7 @@ class Utils():
         try:
             gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
+            st.write(loc)
             latitude = loc['location']['lat']
             longitude = loc['location']['lng']
             return latitude, longitude
