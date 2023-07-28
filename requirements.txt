@@ -1,0 +1,5 @@
+googlemaps
+streamlit
+tensorflow-cpu
+Pillow
+requests

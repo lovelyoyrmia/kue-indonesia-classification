@@ -1,8 +1,6 @@
 import streamlit as st
 from json import load
 from pages import Pages
-from PIL import Image
-
 
 def main():
     st.set_page_config(page_title="Indonesian Cakes Classification", page_icon="🍰" ,layout="wide")
