@@ -7,15 +7,18 @@ from json import load
 import requests
 import googlemaps
 import webbrowser
+import os
 
 class Utils():
     def __init__(self, 
                  error_upload="Cannot Upload Your Image !",
                  error_url="Please Input The Valid URL",
-                 error_file="Cannot Upload File. Please try again !"):
+                 error_file="Cannot Upload File. Please try again !",
+                 api_key=os.getenv('API_KEY_MAPS')):
         self.error_upload = error_upload
         self.error_url = error_url
         self.error_file = error_file
+        self.api_key = api_key
 
     def loadImageUrl(self, url):
         try:
@@ -49,7 +52,8 @@ class Utils():
     
     def getCurrentLoc(self):
         try:
-            gmaps = googlemaps.Client(key='AIzaSyADMXi0xKWeQ9TF6knXa-hWNSypzK_vh7Q')
+            print(self.api_key)
+            gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
             latitude = loc['location']['lat']
             longitude = loc['location']['lng']
@@ -72,8 +76,7 @@ class Utils():
         }
     
     def getRestaurant(self, keyword, lat, lng):
-        apiKey = 'AIzaSyADMXi0xKWeQ9TF6knXa-hWNSypzK_vh7Q'
-        url = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&keyword={keyword}&opennow=true&radius=2000&type=restaurant&key={apiKey}'
+        url = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={lat},{lng}&keyword={keyword}&opennow=true&radius=2000&type=restaurant&key={self.api_key}'
         response = requests.get(url)
         data = response.json()['results']
         

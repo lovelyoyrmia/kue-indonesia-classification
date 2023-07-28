@@ -1,8 +1,11 @@
 import streamlit as st
 from json import load
 from pages import Pages
+from dotenv import load_dotenv
 
 def main():
+    load_dotenv()
+    
     st.set_page_config(page_title="Indonesian Cakes Classification", page_icon="🍰" ,layout="wide")
     hide_menu_style = """
     <style>
@@ -23,8 +26,6 @@ def main():
         [data-testid="stHeader"] {
             background-color: transparent
         }
-
-
     </style>
     """
     st.markdown(hide_menu_style, unsafe_allow_html=True)
