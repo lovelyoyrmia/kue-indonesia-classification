@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 def main():
     load_dotenv()
     
-    st.set_page_config(page_title="Indonesian Cakes Classification", page_icon="🍰" ,layout="wide")
+    st.set_page_config(page_title="Indonesian (Manado) Cakes Classification", page_icon="🍰" ,layout="wide")
     hide_menu_style = """
     <style>
         #MainMenu {display: none; }
@@ -33,20 +33,17 @@ def main():
     languages = ['Bahasa Indonesia', 'English']
     pagesType = ['Home', 'Predict']
 
-    st.sidebar.title('Indonesian Cakes')
+    st.sidebar.title('Indonesian (Manado) Cakes')
     st.session_state.pages = st.sidebar.selectbox(
         "Pages", pagesType
     )
     st.session_state.languages = st.sidebar.radio(
         "Select Languages", languages
     )
-    
-
-    f = open('languages.json')
+    f = open('datasets/languages.json')
     data_languages = load(f)
-    
 
-    lng = 'en' if 'English' in st.session_state.languages else 'id'    
+    lng = 'en' if 'English' in st.session_state.languages else 'id'
     data_lng = data_languages[lng] if 'English' in st.session_state.languages else data_languages[lng]
     
     page = Pages(data_lng=data_lng, lang=lng)

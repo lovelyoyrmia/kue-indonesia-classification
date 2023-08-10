@@ -1,29 +1,21 @@
 import os
 from keras.models import load_model
-from keras.preprocessing.image import img_to_array, smart_resize
+from keras.preprocessing.image import img_to_array
 import numpy as np
-from tensorflow import reshape
+from tensorflow import image
 
 class Model():
-    def __init__(self, model_path=os.path.join(os.getcwd(), 'model', 'model.h5')):
+    def __init__(self, classes, model_path=os.path.join(os.getcwd(), 'model', 'model_kue_manado.h5')):
         self.model_path = model_path
-        self.class_names = [
-            'kue_dadar_gulung',
-            'kue_kastengel',
-            'kue_klepon',
-            'kue_lapis',
-            'kue_lumpur',
-            'kue_putri_salju',
-            'kue_risoles',
-            'kue_serabi'
-        ]
+        self.class_names = classes
 
-    def predict(self, image):
+    def predict(self, img):
         model = load_model(self.model_path)
-        img = img_to_array(image)
-        img = smart_resize(img, (224, 224))
-        img = reshape(img, (-1, 224, 224, 3))
-        prediction = model.predict(img/255)
-        prediction = np.argmax(prediction)
-        prediction = self.class_names[prediction]
-        return prediction
+        img = img_to_array(img)
+        img = image.resize(img, size=(224, 224))
+        img = np.expand_dims(img, axis=0) / 255.
+        prediction = model.predict(img)
+        predicted = np.argmax(prediction)
+        probabilites = prediction[0][predicted]
+        prediction = self.class_names[predicted]
+        return prediction, probabilites

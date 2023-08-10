@@ -41,23 +41,34 @@ class Utils():
         except Exception:
             st.error(self.error_file)
             return None
+        
+    def loadDatasets(self):
+        f = open('datasets/datasets.json', encoding='utf-8')
+        data = load(f)
+        return data
+    
+    def loadClasses(self):
+        f = open('datasets/classes.txt')
+        data = f.read()
+        classes = data.split(',')
+        return classes
     
     def getPrediction(self, img, lng):
-        model = Model()
-        f = open('datasets.json')
-        data = load(f)
-        prediction = model.predict(img)
+        classes = self.loadClasses()
+        model = Model(classes=classes)
+        data = self.loadDatasets()
+        prediction, probabilities = model.predict(img)
         label = prediction.replace('_', ' ').title()
         description = data[prediction][lng]['description']
         url = data[prediction][lng]['url']
-        return label, description, url
+        return label, description, url, probabilities
     
     def getCurrentLoc(self):
         st.write(self.api_key)
         try:
             gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
-            st.write(loc)
+            # st.write(loc)
             latitude = loc['location']['lat']
             longitude = loc['location']['lng']
             return latitude, longitude
@@ -92,9 +103,4 @@ class Utils():
             
             return restaurants
         except Exception:
-            return []
-    
-    def openGmaps(self, lat, lng):
-        url = f'https://www.google.com/maps/search/?api=1&query={lat},{lng}'
-        webbrowser.open_new_tab(url)
-    
+            return None

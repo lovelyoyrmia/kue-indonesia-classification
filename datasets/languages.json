@@ -1,7 +1,7 @@
 {
     "en": {
-        "title": "Traditional Indonesian Cakes: Classification and Cultural Richness",
-        "title_desc": "Welcome to Indonesian Cake Classification, a culinary innovation based on Machine Learning! Discover a variety of traditional cakes from all over the archipelago automatically. Enjoy a unique culinary experience with the latest technology.",
+        "title": "Manado Traditional Cake Explorer: A Machine Learning Culinary Innovation",
+        "title_desc": "Welcome to Manado Traditional Cake Classification, a culinary innovation powered by Machine Learning! Explore a diverse array of traditional cakes from the heart of Manado automatically. Indulge in a distinctive culinary journey aided by state-of-the-art technology. Let's delve into and relish the flavors of Manado's traditional cakes with the assistance of advanced artificial intelligence!",
         "title_sidebar": "Indonesian Cakes",
         "prediction_result": "Prediction Results",
         "error_upload": "Cannot Upload Your Image !",
@@ -18,15 +18,16 @@
         "info_upload": "Please Upload Your Image !",
         "label_link": "See more",
         "image": "Original Image",
-        "title_predict": "Indonesian Cakes Classification",
+        "title_predict": "Traditional Manado Cakes Classification",
         "nearby_resto": "Nearby Restaurants",
         "location": "Location",
         "not_found_resto": "Restaurants not found",
-        "gmaps": "Open Google Maps"
+        "gmaps": "Open Google Maps",
+        "cake_not_found": "Cake's not recognized"
     },
     "id": {
-        "title": "Kue Tradisional Indonesia: Klasifikasi dan Kekayaan Budaya",
-        "title_desc": "Selamat datang di Klasifikasi Kue Indonesia, inovasi kuliner berbasis Machine Learning! Temukan ragam kue tradisional dari seluruh Nusantara secara otomatis. Nikmati pengalaman kuliner yang unik dengan bantuan teknologi terbaru.",
+        "title": "Penjelajah Kue Tradisional Manado: Inovasi Kuliner Berbasis Machine Learning",
+        "title_desc": "Selamat datang di Klasifikasi Kue Tradisional Manado, sebuah inovasi kuliner yang didukung oleh Machine Learning! Telusuri berbagai macam kue tradisional dari pusat kota Manado secara otomatis. Nikmati perjalanan kuliner yang khas dengan dukungan teknologi mutakhir. Mari kita eksplorasi dan nikmati cita rasa kue tradisional Manado dengan bantuan kecerdasan buatan yang canggih!",
         "title_sidebar": "Kue Indonesia",
         "prediction_result": "Hasil Prediksi",
         "error_upload": "Tidak dapat mengupload gambar !",
@@ -43,10 +44,11 @@
         "info_upload": "Mohon upload gambar !",
         "label_link": "Lihat lebih lanjut",
         "image": "Gambar Asli",
-        "title_predict": "Klasifikasi Kue Indonesia",
+        "title_predict": "Klasifikasi Kue Tradisional Manado",
         "nearby_resto": "Restoran Terdekat",
         "location": "Lokasi",
         "not_found_resto": "Tidak ada restoran terdekat",
-        "gmaps": "Buka Google Map"
+        "gmaps": "Buka Google Map",
+        "cake_not_found": "Kue tidak dikenali"
     }
 }

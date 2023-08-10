@@ -1,0 +1,72 @@
+{
+    "kue_biapong": {
+        "en": {
+            "description": "Biapong are a favorite snack of Manadonese people. The craze for biapong is related to the legendary Biapong / Bakpao Kawangkoan which was pioneered by Rumah Kopi Gembira Kawangkoan (established in 1946) and later followed by several other Coffee Houses that provide Biapong as a companion to drinking coffee.",
+            "url": null
+        },
+        "id": {
+            "description": "Bakpao adalah makanan ringan favorit orang Manado. Kegemaran akan bakpao memiliki keterkaitan dengan Biapong / Bakpao Kawangkoan yang legendaris yang dipelopori oleh Rumah Kopi Gembira Kawangkoan (berdiri tahun 1946) dan kemudian diikuti oleh beberapa Rumah Kopi lainnya yang menyediakan bakpao sebagai pendamping minum kopi.",
+            "url": "https://id.wikipedia.org/wiki/Bakpao"
+        }
+    },
+    "kue_klapertaart": {
+        "en": {
+            "description": "Klappertaart is a Dutch-influenced Indonesian cake originating from Manado, North Sulawesi. Klappertaart is Dutch for \"coconut cake\" or \"coconut tart\" and it's made from flour, sugar, milk, butter, and the flesh and juice of coconuts",
+            "url": "https://en.wikipedia.org/wiki/Klappertaart"
+        },
+        "id": {
+            "description": "Klapertar (dari bahasa Belanda: klappertaart; gabungan kata klapper \"kelapa\" + taart \"kue\") dikenal sebagai kue khas Manado dengan bahan dasar kelapa, tepung terigu, susu, mentega dan telur. Resep adonan tersebut merupakan pengaruh saat zaman pendudukan Belanda di Manado. Terdapat beberapa macam cara memasak klappertaart.",
+            "url": "https://id.wikipedia.org/wiki/Klapertar"
+        }
+    },
+    "kue_panada": {
+        "en": {
+            "description": "Panada is one of Manado's popular cakes besides klappertaart. Some say this cake is a Dutch culinary influence, or also say this cake is a Portuguese culinary influence because of its shape that looks like a pastel cake.",
+            "url": null
+        },
+        "id": {
+            "description": "Panada adalah salah satu kue khas Manado yang populer selain klappertaart. Ada yang mengatakan kue ini merupakan pengaruh kuliner Belanda, atau juga mengatakan kue ini merupakan pengaruh kuliner Portugis karena bentuknya yang mirip kue pastel.",
+            "url": "https://id.wikipedia.org/wiki/Panada"
+        }
+    },
+    "kue_balapis": {
+        "en": {
+            "description": "The majority of Indonesian people know it as layer cake. For the people of Manado, this cake is known as balapis. There are three variants of balapis commonly available in North Sulawesi, namely pandan chocolate (green brown), brown coconut milk (white chocolate), and pandan coconut milk (green and white).",
+            "url": "https://rasamasa.com/en/recipes/balapis-manado"
+        },
+        "id": {
+            "description": "Mayoritas masyarakat Indonesia mengenal dengan sebutan kue lapis. Bagi masyarakat Manado, kue ini dikenal dengan nama balapis. Terdapat tiga varian balapis yang umum disediakan di Sulawesi Utara, yaitu pandan cokelat (hijau cokelat), cokelat santan (cokelat putih), dan pandan santan (hijau putih).",
+            "url": "https://www.kompas.com/food/read/2021/08/25/102839775/mengenal-apang-dan-balapis-kudapan-di-acara-adat-minahasa"
+        }
+    }, 
+    "kue_brudel": {
+        "en": {
+            "description": "Brudel cake or also known as Manado sponge is a combination of cake and bread that is often consumed in the afternoon. Generally, as a companion to drink tea and coffee. This heavy textured cake is commonly used as a treat, especially during worship in homes.",
+            "url": null
+        },
+        "id": {
+            "description": "Kue brudel atau yang juga dikenal sebagai bolu khas Manado merupakan perpaduan antara cake dan roti yang sering dikonsumsi pada sore hari. Umumnya, sebagai teman minum teh dan kopi. Kue bertekstur berat ini umum digunakan sebagai suguhan, terutama saat ibadah di rumah-rumah.",
+            "url": "https://food.detik.com/berita-boga/d-6139145/kenalan-dengan-brudel-kue-tempo-dulu-yang-terkenal-di-timur-indonesia"
+        }
+    },
+    "kue_cucur": {
+        "en": {
+            "description": "Kue cucur (Indonesian) or kuih cucur (Malay), known in Thai as khanom fak bua (ขนมฝักบัว, pronounced [kʰā.nǒm fàk būa̯]) or khanom chuchun (ขนมจู้จุน or จูจุ่น), is a traditional snack from Indonesia. The dessert, made of fried rice flour mixed with palm sugar, is thick in the middle and thin at the edges.",
+            "url": "https://en.wikipedia.org/wiki/Kue_cucur"
+        },
+        "id": {
+            "description": "Kue Cucur atau Cucur atau juga Cuhcur merupakan jajanan khas suku Betawi yang berasal dari wilayah barat pulau Jawa (kini merupakan bagian dari provinsi Jakarta, provinsi Banten, dan provinsi Jawa Barat). Kue ini terbuat dari tepung beras dan gula jawa atau gula aren yang digoreng.",
+            "url": "https://id.wikipedia.org/wiki/Kue_cucur"
+        }
+    },
+    "kue_lalampa": {
+        "en": {
+            "description": "Lalampa is an Indonesian glutinous rice cake stuffed with spicy shredded fish. This Manado specialty is similar to Javanese lemper. The filling of the original Lalampa is always made from cakalang (skipjack tuna).",
+            "url": "https://www.youtube.com/watch?v=lU8HVhLvKgU"
+        },
+        "id": {
+            "description": "Lalampa merupakan salah satu jenis kue tradisional khas Manado. Dari bentuknya, lalampa terlihat mirip dengan lemper. Lalampa berbahan dasar nasi berisi ikan cakalang suwir. Bahan lainnya adalah beras pulo atau beras ketan yang membuat tekstur lalampa lembut dan pulen.",
+            "url": "https://www.kompas.com/food/read/2021/09/04/170400175/resep-lalampa-khas-manado-kue-tradisional-mirip-lemper-bakar"
+        }
+    }
+}
