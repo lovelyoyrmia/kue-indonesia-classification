@@ -64,7 +64,7 @@ class Utils():
         return label, description, url, probabilities
     
     def getCurrentLoc(self):
-        st.write(self.api_key)
+        # st.write(self.api_key)
         try:
             gmaps = googlemaps.Client(key=self.api_key)
             loc = gmaps.geolocate()
